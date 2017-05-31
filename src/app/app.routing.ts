@@ -5,7 +5,7 @@ import { LinkComponent } from './link/link.component';
 
 
 const routes: Routes = [
-  { path: '',
+  { path: 'home',
     component: HomeComponent
    },
    { path: 'about',
@@ -13,7 +13,10 @@ const routes: Routes = [
    },
    { path: 'link',
     component: LinkComponent
-   }
+   },
+   { path: '', 
+    redirectTo:'/home', pathMatch: 'full'
+  }
 ];
 
 export const AppRoutes = RouterModule.forRoot(routes);
