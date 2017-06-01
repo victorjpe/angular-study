@@ -9,6 +9,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { LinkComponent } from './link/link.component';
+import { HomeCardComponent } from './home-card/home-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LinkComponent } from './link/link.component';
     NavigationBarComponent,
     AboutComponent,
     HomeComponent,
-    LinkComponent
+    LinkComponent,
+    HomeCardComponent
 ],
   imports: [
     BrowserModule,
