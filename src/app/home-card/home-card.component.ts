@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { Link } from '../classes/link';
 
 @Component({
   selector: 'app-home-card',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeCardComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
 
+  @Input() heading: string = '';
+  @Input() showSubTitle: boolean = false;
+  @Input() link: Link;
 }
