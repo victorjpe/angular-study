@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Link } from '../classes/link';
 
 @Component({
   selector: 'app-home',
@@ -13,5 +12,4 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  signUpLinks: Link = { linkUrl: '/signup', icon: 'fa-user-plus' };
 }

@@ -5,15 +5,15 @@
 </div>
 <div class="card-group">
   <div class="card">
-    <app-home-card class="card-block bg-inverse" [heading]="'We make projects'" [showSubTitle]="false"></app-home-card>
+    <app-home-card class="card-block bg-inverse" [heading]="'We make projects'" [showSubTitle]="false" [link]="{ linkUrl: '/project', icon: 'fa-cubes'}"></app-home-card>
   </div>
   <div class="card">
-    <app-home-card class="card-block bg-success" [heading]="'Experience'" [showSubTitle]="true"></app-home-card>
+    <app-home-card class="card-block bg-success" [heading]="'Experience'" [showSubTitle]="false" [link]="{ linkUrl: '/experience', icon: 'fa-industry'}"></app-home-card>
   </div>
   <div class="card">
-    <app-home-card class="card-block bg-primary" [heading]="'Discover'" [showSubTitle]="false"></app-home-card>
+    <app-home-card class="card-block bg-primary" [heading]="'Discover'" [showSubTitle]="false" [link]="{ linkUrl: '/discover', icon: 'fa-cc-discover'}"></app-home-card>
   </div>
 </div>
 <div class="card">
-  <app-home-card class="card-block bg-warning" [heading]="'Signup'" [showSubTitle]="false" [link]="signUpLinks"></app-home-card>
+  <app-home-card class="card-block bg-warning" [heading]="'Signup'" [showSubTitle]="false" [link]="{ linkUrl: '/signup', icon: 'fa-user-plus'}"></app-home-card>
 </div>
