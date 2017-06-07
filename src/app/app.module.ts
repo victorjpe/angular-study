@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { UserService } from '../service/user.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
