@@ -1,36 +1,59 @@
-<div class="card card-inverse card-warning">
+<div class="card card-inverse card-warning full-page">
   <div class="card-block">
     <h4 class="card-title">Sign Up</h4>
-    <div class="container">
-      <form>
+    <div class="container" *ngIf="!firstName; else displayUser">
+      <form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)">
         <div class="form-group row">
-          <label for="inputName" class="col-sm-1-12 col-form-label">First Name</label>
-          <div class="col-sm-2-12 ml-4">
-            <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+          <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="firstName" name="firstName" id="firstName" placeholder="First Name">
+            <div class="alert" role="alert" *ngIf="!signUpForm.controls['firstName'].valid && signUpForm.controls['firstName'].touched">This is required</div>
           </div>
-          <label for="inputName" class="col-sm-4-12 col-form-label">First Name</label>
-          <div class="col-sm-5-12 ml-4">
-            <input type="text" class="form-control" name="inputName" id="inputName" placeholder="">
+          <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="lastName" name="lastName" id="lastName" placeholder="Last Name">
+            <div class="alert" role="alert" *ngIf="!signUpForm.controls['lastName'].valid && signUpForm.controls['lastName'].touched">This is required</div>
           </div>
         </div>
-        <fieldset class="form-group row">
-          <legend class="col-form-legend col-sm-1-12">Group name</legend>
-          <div class="col-sm-1-12">
-              <form class="form-inline">
-                <div class="form-group">
-                  <label for=""></label>
-                  <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                  <small id="helpId" class="text-muted">Help text</small>
-                </div>
-              </form>
-          </div>
-        </fieldset>
         <div class="form-group row">
-          <div class="offset-sm-2 col-sm-10">
-            <button type="submit" class="btn btn-primary">Action</button>
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-4">
+            <input type="email" class="form-control" name="email" id="email" formControlName="email" placeholder="Email">
+            <div class="alert" role="alert" *ngIf="!signUpForm.controls['email'].valid && signUpForm.controls['email'].touched">Email is required and formatted</div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="offset-sm-11 col-sm-12">
+            <button type="submit" class="btn btn-default" [disabled]="!signUpForm.valid">Sign Up</button>
           </div>
         </div>
       </form>
     </div>
+    <ng-template #displayUser>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2-12">
+            <label class="label label-default">First Name</label>
+          </div>
+          <div class="offset-sm-1 col-sm-4-12">
+            <label class="label label-default">{{ firstName }}</label>
+          </div>
+          <div class="col-sm-2-12">
+            <label class="label label-default">Last Name</label>
+          </div>
+          <div class="offset-sm-1 col-sm-4-12">
+            <label class="label label-default">{{ lastName }}</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2-12">
+            <label class="label label-default">Email</label>
+          </div>
+          <div class="offset-sm-1 col-sm-10-12">
+            <label class="label label-default">{{ email }}</label>
+          </div>
+        </div>
+      </div>
+    </ng-template>
   </div>
 </div>
