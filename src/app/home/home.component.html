@@ -1,31 +1,19 @@
 <div class="card-group">
   <div class="card">
-    <div class="card-block bg-danger">
-      <h1 class="card-title text-white text-center text-uppercase font-weight-bold">WildCards</h1>
-      <h4 class="card-subtitle text-white text-center font-weight-bold">in the details...</h4>
-    </div>
+    <app-home-card class="card-block bg-danger" [heading]="'WildCards'" [link]="{linkUrl: '/home', icon: 'fa-microphone'}"></app-home-card>
   </div>
 </div>
 <div class="card-group">
   <div class="card">
-    <div class="card-block bg-inverse">
-      <h1 class="card-title text-white text-center text-uppercase font-weight-bold">We make projects</h1>
-    </div>
+    <app-home-card class="card-block bg-inverse" [heading]="'We make projects'" [link]="{ linkUrl: '/project', icon: 'fa-cubes'}"></app-home-card>
   </div>
   <div class="card">
-    <div class="card-block bg-success">
-      <h1 class="card-title text-white text-center text-uppercase font-weight-bold">Experience</h1>
-      <h4 class="card-subtitle text-white text-center font-weight-bold">in the details...</h4>
-    </div>
+    <app-home-card class="card-block bg-success" [heading]="'Experience'" [link]="{ linkUrl: '/experience', icon: 'fa-industry'}"></app-home-card>
   </div>
   <div class="card">
-    <div class="card-block bg-primary">
-      <h1 class="card-title text-white text-center text-uppercase font-weight-bold">Discover</h1>
-    </div>
+    <app-home-card class="card-block bg-primary" [heading]="'Discover'" [link]="{ linkUrl: '/discover', icon: 'fa-cc-discover'}"></app-home-card>
   </div>
 </div>
 <div class="card">
-  <div class="card-block bg-warning">
-     <h1 class="card-title text-white text-center text-uppercase font-weight-bold">Signup</h1>
-  </div>
+  <app-home-card class="card-block bg-warning" [heading]="'Signup'" [link]="{ linkUrl: '/signup', icon: 'fa-user-plus'}"></app-home-card>
 </div>

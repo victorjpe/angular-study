@@ -12,9 +12,4 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  changed () {
-    console.log('value changed');
-  }
-
-  array = ['abc', 'fgb', 'uio'];
 }

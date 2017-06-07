@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { LinkComponent } from './link/link.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
@@ -11,8 +11,8 @@ const routes: Routes = [
    { path: 'about',
     component: AboutComponent
    },
-   { path: 'link',
-    component: LinkComponent
+   { path: 'signup',
+    component: SignupComponent
    },
    { path: '', 
     redirectTo:'/home', pathMatch: 'full'
