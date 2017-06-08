@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { Link } from '../classes/link';
+import { Link } from '../../classes/link';
 
 @Component({
   selector: 'app-home-card',
