@@ -1,12 +1,16 @@
 import { TestBed, async } from '@angular/core/testing';
 
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        RouterModule,
+        AppComponent,
+        NavigationBarComponent
       ],
     }).compileComponents();
   }));

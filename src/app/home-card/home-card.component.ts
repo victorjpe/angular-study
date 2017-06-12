@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Link } from '../../classes/link';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
 
@@ -18,7 +18,7 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
     ])
   ]
 })
-export class HomeCardComponent implements OnInit {
+export class HomeCardComponent {
 
   state: string = 'small';
   constructor() {}
