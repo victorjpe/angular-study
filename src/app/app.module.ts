@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { HomeCardComponent } from './home-card/home-card.component';
 import { SignupComponent } from './signup/signup.component';
 import { SearchComponent } from './search/search.component';
+import { IconsComponent } from './icons/icons.component';
+import { SpeechRecognitionService } from '../service/speech-recognition.service';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
     HomeCardComponent,
     SignupComponent,
-    SearchComponent
+    SearchComponent,
+    IconsComponent
 ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { SearchComponent } from './search/search.component';
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [ UserService],
+  providers: [ UserService, SpeechRecognitionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

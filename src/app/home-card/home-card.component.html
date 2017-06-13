@@ -1,6 +1,5 @@
 <div class="home-card-titles py-3">
   <h1 class="card-title text-white text-center text-uppercase font-weight-bold">{{ heading }}</h1>
   <h4 *ngIf="showSubTitle" class="card-subtitle text-white text-center font-weight-bold">in the details...</h4>
-  <h2 class="text-center pt-5" *ngIf="link" [routerLink]="link.linkUrl"><i [@iconAnimations]="state" (mouseenter)="animate('enter')" (mouseleave)="animate('leave')" [ngClass]="link.icon" class="text-white fa fa-2x"
-      aria-hidden="true"></i></h2>
+  <h2 class="text-center pt-5" *ngIf="link" [routerLink]="link.linkUrl"><app-icons [icon]="link.icon"></app-icons></h2>
 </div>
