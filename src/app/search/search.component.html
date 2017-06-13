@@ -1,9 +1,12 @@
 <div class="card bg-danger">
   <div class="card-block">
     <h4 class="card-title text-white text-center text-uppercase font-weight-bold">Wildcards</h4>
-    <h2 class="text-center pt-5" (click)="check()"><app-icons [icon]="'fa-microphone'"></app-icons></h2>
-  </div>
-  <div class="padding">
-    {{ speechData }}
+    <h2 class="text-center pt-5" (click)="check()"><app-icons [icon]="'fa-microphone'" [ifActionIcon]="true"></app-icons></h2>
+    <button type="button" class="btn btn-link text-white float-right" (click)="clearResult()"><i class="fa fa-2x fa-trash" aria-hidden="true"></i></button>
+    <div class="card m-5 clearfix">
+      <ul class="list-group list-group-flush" *ngFor="let item of speechData">
+        <li class="list-group-item list-group-item-danger">{{ item }}</li>
+      </ul>
+    </div>
   </div>
 </div>  

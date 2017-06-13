@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnDestroy } from '@angular/core';
 import { SpeechRecognitionService } from '../../service/speech-recognition.service';
 
 @Component({
@@ -6,9 +6,9 @@ import { SpeechRecognitionService } from '../../service/speech-recognition.servi
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent {
+export class SearchComponent implements OnDestroy {
 
-  speechData: any[];
+  speechData: any[] = [];
   isListening: boolean = false;
   constructor(private speechRecognitionService: SpeechRecognitionService) {}
 
@@ -45,5 +45,12 @@ export class SearchComponent {
     this.speechRecognitionService.DestroySpeechObject();
   }
 
+  clearResult() {
+    this.speechData = [];
+  }
+  
+  ngOnDestroy() {
+    this.stop();
+  }
 
 }

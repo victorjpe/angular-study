@@ -31,5 +31,10 @@ export class IconsComponent {
       this.state = 'small';
   }
 
+  toggle() {
+    this.state =  this.state === 'large'? 'small': 'large';
+  }
+
   @Input() icon: string;
+  @Input() ifActionIcon: boolean;
 }
